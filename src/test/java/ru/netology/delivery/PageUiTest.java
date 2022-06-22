@@ -1,9 +1,11 @@
-package ru.netology.delivery.test;
+package ru.netology.delivery;
 
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import lombok.val;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
-import ru.netology.delivery.data.DataGenerator;
+import data.DataGenerator;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -12,8 +14,8 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class PageUiTest {
-    private String date1 = LocalDate.now().plusDays(4).format(DateTimeFormatter.ofPattern("dd.MM.uuuu"));
-    private String date2 = LocalDate.now().plusDays(10).format(DateTimeFormatter.ofPattern("dd.MM.uuuu"));
+    private String date1 = LocalDate.now().plusDays(1).format(DateTimeFormatter.ofPattern("dd.MM.uuuu"));
+    private String date2= LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.uuuu"));
 
     @Test
     void shouldRegisterCardDelivery() {

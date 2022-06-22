@@ -1,7 +1,7 @@
-package ru.netology.delivery.data;
+package data;
 
 import com.github.javafaker.Faker;
-import ru.netology.delivery.test.DeliveryTest;
+import test.DeliveryTest;
 
 import java.util.Locale;
 import java.util.Random;
